@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-23 09:47:35 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMjM7MDk6NDM6MDYgw5ZTOzI5MTE="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMjM7MDk6NDc6MzUgw5ZTOzE7MzAyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dizi, dizi2" type="Integer" array="True" size="5"/>
+            <declare name="i, j, carpim" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen 5 Tane Say&#305; Giriniz.&quot;" newline="True"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="dizi[i]"/>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <assign variable="carpim" expression="1"/>
+                <for variable="j" start="0" end="4" direction="inc" step="1">
+                    <if expression="i != j">
+                        <then>
+                            <assign variable="carpim" expression="carpim * dizi[j]"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <assign variable="dizi2[i]" expression="carpim"/>
+            </for>
+            <for variable="j" start="0" end="4" direction="inc" step="1">
+                <output expression="dizi2[j]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

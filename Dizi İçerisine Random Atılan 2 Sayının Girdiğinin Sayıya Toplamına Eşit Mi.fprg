@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-23 10:17:44 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMjM7MTA6MDk6NDYgw5ZTOzI5MDk="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMjM7MTA6MTc6NDQgw5ZTOzE7MzAxNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dizi" type="Integer" array="True" size="6"/>
+            <declare name="i, j, k, sayi" type="Integer" array="False" size=""/>
+            <assign variable="k" expression="0"/>
+            <for variable="i" start="0" end="5" direction="inc" step="1">
+                <assign variable="dizi[i]" expression="random(8) + 1"/>
+            </for>
+            <output expression="&quot;L&#252;tfen Bir Say&#305; Giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <for variable="j" start="i+1" end="5" direction="inc" step="1">
+                    <if expression="dizi[i] + dizi[j] == sayi">
+                        <then>
+                            <output expression="dizi[i] &amp; &quot; + &quot; &amp; dizi[j] &amp; &quot; = &quot; &amp; sayi" newline="True"/>
+                            <assign variable="k" expression="1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <if expression="k == 0">
+                <then>
+                    <output expression="&quot;&#220;zg&#252;n&#252;m,Girdi&#287;iniz Say&#305; Dizideki Say&#305;lar&#305;n Toplam&#305;na E&#351;it De&#287;il.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

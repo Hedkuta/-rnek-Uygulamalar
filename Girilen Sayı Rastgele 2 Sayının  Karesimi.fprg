@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-12 12:01:10 &#214;&#214;"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMTE7MTE6NTE6NTUgw5ZTOzI5MDQ="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMTI7MTI6MDE6MTAgw5bDljsxOzMxMzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, i, j, flag" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen &#304;ki Tane Say&#305;n&#305;n Karelerinin Toplam&#305; Oldu&#287;unu D&#252;&#351;&#252;nd&#252;&#287;&#252;n&#252;z Say&#305;y&#305; Giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <assign variable="flag" expression="0"/>
+            <for variable="i" start="1" end="sayi / 2" direction="inc" step="1">
+                <for variable="j" start="1" end="sayi / 2" direction="inc" step="1">
+                    <if expression="i * i + j * j == sayi">
+                        <then>
+                            <output expression="i &amp; &quot; Ve &quot; &amp; j &amp; &quot; Say&#305;lar&#305;n&#305;n Karesi Girdi&#287;iniz Say&#305;ya E&#351;it:&quot; &amp; sayi" newline="True"/>
+                            <assign variable="flag" expression="1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <if expression="flag == 0">
+                <then>
+                    <output expression="&quot;Girdi&#287;iniz Say&#305; Hi&#231;bir 2 Say&#305;n&#305;n Kareleri Toplam&#305;na E&#351;it De&#287;ildir.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

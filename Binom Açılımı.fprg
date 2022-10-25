@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-08 01:46:30 &#214;&#214;"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDg7MDE6MjI6Mzkgw5bDljszMDQw"/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDg7MDE6NDY6MzAgw5bDljsxOzMxNDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ustsira, altsira" type="Integer" array="True" size="11"/>
+            <declare name="satir, sutun, degisim, sayi" type="Integer" array="False" size=""/>
+            <assign variable="ustsira[0]" expression="1"/>
+            <output expression="&quot;L&#252;tfen Binom(Pascal)'da Hesaplamak &#304;stedi&#287;iniz Kuvvetin Derecesini Giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <for variable="satir" start="0" end="sayi" direction="inc" step="1">
+                <for variable="sutun" start="0" end="satir" direction="inc" step="1">
+                    <if expression="sutun = 0 || satir = sutun">
+                        <then>
+                            <assign variable="altsira[sutun]" expression="1"/>
+                        </then>
+                        <else>
+                            <assign variable="altsira[sutun]" expression="ustsira[sutun - 1] + ustsira[sutun]"/>
+                        </else>
+                    </if>
+                </for>
+                <for variable="degisim" start="0" end="satir" direction="inc" step="1">
+                    <assign variable="ustsira[degisim]" expression="altsira[degisim]"/>
+                    <assign variable="altsira[degisim]" expression="0"/>
+                    <output expression="ustsira[degisim] &amp; &quot; &quot;" newline="False"/>
+                </for>
+                <output expression="&quot; &quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-23 11:23:45 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMjM7MTA6NDQ6MDIgw5ZTOzI5MDA="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMjM7MTE6MjM6NDUgw5ZTOzE7MzAxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dizi, dizi2" type="Integer" array="True" size="6"/>
+            <declare name="i, j, sayac" type="Integer" array="False" size=""/>
+            <assign variable="dizi[0]" expression="7"/>
+            <assign variable="dizi[1]" expression="12"/>
+            <assign variable="dizi[2]" expression="3"/>
+            <assign variable="dizi[3]" expression="6"/>
+            <assign variable="dizi[4]" expression="5"/>
+            <assign variable="dizi[5]" expression="2"/>
+            <for variable="i" start="0" end="5" direction="inc" step="1">
+                <assign variable="sayac" expression="0"/>
+                <for variable="j" start="i+1" end="5" direction="inc" step="1">
+                    <if expression="dizi[i] &gt; dizi[j]">
+                        <then>
+                            <assign variable="sayac" expression="sayac + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <assign variable="dizi2[i]" expression="sayac"/>
+            </for>
+            <for variable="j" start="0" end="5" direction="inc" step="1">
+                <output expression="dizi2[j]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

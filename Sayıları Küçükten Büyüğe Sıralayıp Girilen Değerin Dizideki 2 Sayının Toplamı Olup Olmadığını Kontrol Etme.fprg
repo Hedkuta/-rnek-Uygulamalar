@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-23 10:43:46 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMjM7MTA6MjI6MjIgw5ZTOzI4OTg="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMjM7MTA6NDM6NDYgw5ZTOzE7MzAxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dizi" type="Integer" array="True" size="6"/>
+            <declare name="i, j, k, tanpon, sol, sa&#287;, sayi" type="Integer" array="False" size=""/>
+            <assign variable="dizi[0]" expression="7"/>
+            <assign variable="dizi[1]" expression="12"/>
+            <assign variable="dizi[2]" expression="6"/>
+            <assign variable="dizi[3]" expression="3"/>
+            <assign variable="dizi[4]" expression="5"/>
+            <assign variable="dizi[5]" expression="15"/>
+            <assign variable="sol" expression="0"/>
+            <assign variable="sa&#287;" expression="5"/>
+            <assign variable="k" expression="0"/>
+            <output expression="&quot;L&#252;tfen Bir Say&#305; Giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <for variable="i" start="0" end="5" direction="inc" step="1">
+                <for variable="j" start="0" end="4" direction="inc" step="1">
+                    <if expression="dizi[j] &gt; dizi[j+1]">
+                        <then>
+                            <assign variable="tanpon" expression="dizi[j]"/>
+                            <assign variable="dizi[j]" expression="dizi[j+1]"/>
+                            <assign variable="dizi[j+1]" expression="tanpon"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <while expression="sol != sa&#287;">
+                <if expression="(dizi[sol] + dizi[sa&#287;]) == sayi">
+                    <then>
+                        <output expression="dizi[sol] &amp; &quot; + &quot; &amp; dizi[sa&#287;] &amp; &quot; = &quot; &amp; sayi" newline="True"/>
+                        <assign variable="k" expression="1"/>
+                        <assign variable="sol" expression="sa&#287;"/>
+                    </then>
+                    <else>
+                        <if expression="sayi &gt; (dizi[sol] + dizi[sa&#287;])">
+                            <then>
+                                <assign variable="sol" expression="sol + 1"/>
+                            </then>
+                            <else>
+                                <assign variable="sa&#287;" expression="sa&#287; - 1"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <if expression="k == 0">
+                <then>
+                    <output expression="&quot;&#220;zg&#252;n&#252;z,Girdi&#287;iniz De&#287;er Dizideki 2 Say&#305;n&#305;n Toplam&#305; De&#287;il.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

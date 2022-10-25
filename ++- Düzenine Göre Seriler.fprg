@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-11 11:38:48 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMTE7MTE6MzU6MTggw5ZTOzI5MDU="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMTE7MTE6Mzg6NDggw5ZTOzE7MzAxOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, i, islem" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen Serinin Son Say&#305;s&#305;n&#305; Giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <assign variable="islem" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <while expression="i &lt;= sayi">
+                <if expression="i % 3 == 0">
+                    <then>
+                        <assign variable="islem" expression="islem - i"/>
+                    </then>
+                    <else>
+                        <assign variable="islem" expression="islem + i"/>
+                    </else>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <output expression="&quot;Girdi&#287;iniz Say&#305;ya G&#246;re Serinin Sonucu: &quot; &amp; islem" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-08 12:52:43 &#214;&#214;"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDg7MTI6MDY6NDUgw5bDljszMDQx"/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMDg7MTI6NTI6NDMgw5bDljsyOzMxNDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rastgele, sayi, denemesayisi, tahminedildimi" type="Integer" array="False" size=""/>
+            <assign variable="tahminedildimi" expression="0"/>
+            <assign variable="denemesayisi" expression="0"/>
+            <output expression="&quot;Say&#305; Tahmin Oyunu Uygulamas&#305;na Ho&#351; Geldiniz :) &quot;" newline="True"/>
+            <output expression="&quot;Say&#305; Aral&#305;&#287;&#305;m&#305;z [1-100] Aral&#305;&#287;&#305;d&#305;r.&quot;" newline="True"/>
+            <assign variable="rastgele" expression="random(100)+1"/>
+            <comment text="Random Eklerken &#214;rne&#287;in (100) Yazd&#305;k.Bu Say&#305; Aral&#305;&#287;&#305; 0-99 Aral&#305;&#287;&#305;d&#305;r +1 Eklenince 1-100 Aral&#305;&#287;&#305;na D&#246;nm&#252;&#351;t&#252;r"/>
+            <while expression="denemesayisi &lt; 10 &amp;&amp; tahminedildimi = 0">
+                <assign variable="denemesayisi" expression="denemesayisi + 1"/>
+                <output expression="&quot;L&#252;tfen Bir Say&#305; Giriniz.&quot;" newline="True"/>
+                <input variable="sayi"/>
+                <if expression="rastgele = sayi">
+                    <then>
+                        <assign variable="tahminedildimi" expression="1"/>
+                        <output expression="&quot;Tebrikler Tuttu&#287;um Say&#305;y&#305; Do&#287;ru Tahmin Ettiniz.&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="denemesayisi &lt; 10">
+                            <then>
+                                <if expression="sayi &gt; rastgele">
+                                    <then>
+                                        <output expression="&quot;Girdi&#287;iniz Say&#305;y&#305; K&#252;&#231;&#252;lt&#252;n. Kalan Deneme Say&#305;n&#305;z: &quot; &amp; 10 - denemesayisi" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Girdi&#287;iniz Say&#305;y&#305; B&#252;y&#252;lt&#252;n. Kalan Deneme Say&#305;n&#305;z: &quot; &amp; 10 - denemesayisi" newline="True"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <if expression="tahminedildimi = 0">
+                <then>
+                    <output expression="&quot;Maalesef Tahmin Etti&#287;im Say&#305;y&#305; Bulamad&#305;n&#305;z.Tahmin Etti&#287;im Say&#305;:&quot; &amp; rastgele" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

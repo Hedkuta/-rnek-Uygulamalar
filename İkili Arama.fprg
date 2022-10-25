@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-25 09:53:05 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMjU7MDk6NDU6MDEgw5ZTOzI5MTA="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMjU7MDk6NTM6MDUgw5ZTOzE7MzAyMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dizi" type="Integer" array="True" size="10"/>
+            <declare name="sol, sa&#287;, flag, aranan, orta" type="Integer" array="False" size=""/>
+            <assign variable="flag" expression="0"/>
+            <assign variable="dizi[0]" expression="23"/>
+            <assign variable="dizi[1]" expression="33"/>
+            <assign variable="dizi[2]" expression="37"/>
+            <assign variable="dizi[3]" expression="49"/>
+            <assign variable="dizi[4]" expression="57"/>
+            <assign variable="dizi[5]" expression="63"/>
+            <assign variable="dizi[6]" expression="77"/>
+            <assign variable="dizi[7]" expression="83"/>
+            <assign variable="dizi[8]" expression="89"/>
+            <assign variable="dizi[9]" expression="96"/>
+            <assign variable="aranan" expression="89"/>
+            <assign variable="sa&#287;" expression="9"/>
+            <assign variable="sol" expression="0"/>
+            <while expression="sa&#287; &gt;= sol">
+                <assign variable="orta" expression="(sa&#287; + sol) / 2"/>
+                <if expression="aranan == dizi[orta]">
+                    <then>
+                        <output expression="&quot;Aranan Say&#305;y&#305; &quot; &amp; orta+1 &amp; &quot; &#304;ndisde Buldunuz.&quot;" newline="True"/>
+                        <assign variable="flag" expression="1"/>
+                        <assign variable="sol" expression="10"/>
+                    </then>
+                    <else>
+                        <if expression="aranan &gt; dizi[orta]">
+                            <then>
+                                <assign variable="sol" expression="orta + 1"/>
+                            </then>
+                            <else>
+                                <assign variable="sa&#287;" expression="orta - 1"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <if expression="flag == 0">
+                <then>
+                    <output expression="&quot;Aranan Say&#305; Bulunamad&#305;.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

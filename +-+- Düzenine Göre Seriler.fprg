@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="KUTAY"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-11 11:35:15 &#214;S"/>
+        <attribute name="created" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMTE7MTE6MzI6MzUgw5ZTOzI5MDE="/>
+        <attribute name="edited" value="S1VUQVk7TEFQVE9QLVRTRENTNElMOzIwMjItMTAtMTE7MTE6MzU6MTUgw5ZTOzE7MzAxMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, i, islem" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen Serinin Son Say&#305;s&#305;n&#305; Giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <assign variable="islem" expression="0"/>
+            <for variable="i" start="1" end="sayi" direction="inc" step="1">
+                <if expression="i % 2 == 0">
+                    <then>
+                        <assign variable="islem" expression="islem - i"/>
+                    </then>
+                    <else>
+                        <assign variable="islem" expression="islem + i"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Girdi&#287;iniz Say&#305;ya G&#246;re Serinin Sonucu: &quot; &amp; islem" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
